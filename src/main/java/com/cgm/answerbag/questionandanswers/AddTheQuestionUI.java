@@ -1,6 +1,8 @@
 package com.cgm.answerbag.questionandanswers;
 
 import com.cgm.answerbag.ConsoleUiBlock;
+import com.cgm.answerbag.NaiveBeanFactory;
+import com.cgm.answerbag.entrypoint.MainMenu;
 import com.cgm.answerbag.entrypoint.ShowErrorMessageUI;
 
 import java.util.Arrays;
@@ -38,7 +40,7 @@ public class AddTheQuestionUI implements ConsoleUiBlock {
 
             questionAnswerService.add(parsedInput);
 
-            return Optional.of(lastInput);
+            return Optional.of(NaiveBeanFactory.mainMenu());
 
         }
 

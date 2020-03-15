@@ -1,7 +1,6 @@
 package com.cgm.answerbag.questionandanswers;
 
 import com.cgm.answerbag.ConsoleUiBlock;
-import org.easymock.EasyMock;
 import org.junit.Test;
 
 import java.util.ArrayList;
