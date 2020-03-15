@@ -1,4 +1,6 @@
-package com.cgm.answerbag.ui;
+package com.cgm.answerbag.entrypoint;
+
+import com.cgm.answerbag.ConsoleUiBlock;
 
 import java.util.Optional;
 import java.util.function.Consumer;

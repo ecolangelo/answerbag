@@ -1,6 +1,7 @@
-package com.cgm.answerbag.ui;
+package com.cgm.answerbag.questionandanswers;
 
-import com.cgm.answerbag.questionandanswers.QuestionAnswerService;
+import com.cgm.answerbag.ConsoleUiBlock;
+import com.cgm.answerbag.entrypoint.ShowErrorMessageUI;
 
 import java.util.Arrays;
 import java.util.List;
@@ -35,7 +36,7 @@ public class AddTheQuestionUI implements ConsoleUiBlock {
 
             QuestionAndAnswerDTO parsedInput = eventuallyParsedInput.get();
 
-            questionAnswerService.add(parsedInput.getQuestion(),parsedInput.getAnswers());
+            questionAnswerService.add(parsedInput);
 
             return Optional.of(lastInput);
 

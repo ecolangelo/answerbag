@@ -1,6 +1,7 @@
-package com.cgm.answerbag.ui;
+package com.cgm.answerbag.questionandanswers;
 
-import com.cgm.answerbag.questionandanswers.QuestionAnswerService;
+import com.cgm.answerbag.ConsoleUiBlock;
+import com.cgm.answerbag.entrypoint.ShowErrorMessageUI;
 import org.easymock.EasyMock;
 import org.junit.Test;
 

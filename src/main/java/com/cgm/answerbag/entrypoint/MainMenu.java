@@ -1,5 +1,8 @@
-package com.cgm.answerbag.ui;
+package com.cgm.answerbag.entrypoint;
 
+import com.cgm.answerbag.ConsoleUiBlock;
+import com.cgm.answerbag.questionandanswers.AddTheQuestionUI;
+import com.cgm.answerbag.questionandanswers.AskTheQuestionUI;
 import com.cgm.answerbag.questionandanswers.QuestionAnswerService;
 
 import java.util.Optional;
@@ -21,11 +24,11 @@ public class MainMenu implements ConsoleUiBlock {
     @Override
     public Optional<ConsoleUiBlock> next(ConsoleUiBlock lastInput) {
 
-        messageConsumer.accept("ask a question within the 3 options\n");
-        messageConsumer.accept("==== QUESTION/ANSWER PROGRAM, OPTIONS: ====\n");
-        messageConsumer.accept("\t\t1) ask a question.\n");
-        messageConsumer.accept("\t\t2) add a new question in the format : <question>? \"<answer1>\" \"<answer2>\" \"<answerX>\"\n");
-        messageConsumer.accept("\t\t3) exit.\n");
+        messageConsumer.accept("=================== QUESTION/ANSWER PROGRAM, OPTIONS: ======================\n" +
+                "\t1) ask a question.\n" +
+                "\t2) add a new question in the format : <question>? \"<answer1>\" \"<answer2>\" \"<answerX>\"\n" +
+                "\t3) exit.\n");
+
 
         String choice = inputProvider.get();
 

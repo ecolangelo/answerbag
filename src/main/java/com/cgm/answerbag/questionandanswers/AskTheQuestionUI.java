@@ -1,7 +1,8 @@
-package com.cgm.answerbag.ui;
+package com.cgm.answerbag.questionandanswers;
 
-import com.cgm.answerbag.questionandanswers.QuestionAnswerService;
+import com.cgm.answerbag.ConsoleUiBlock;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
@@ -20,9 +21,21 @@ public class AskTheQuestionUI implements ConsoleUiBlock {
 
     @Override
     public Optional<ConsoleUiBlock> next(ConsoleUiBlock lastInput) {
+        messageConsumer.accept("please ask the question : ");
 
+        String input = inputProvider.get();
 
+        List<String> answers = service.ask(input.replaceAll("\\?",""));
 
-        return Optional.empty();
+        if(answers.isEmpty()) {
+            messageConsumer.accept("the answer to life, universe and everything is 42 according to \"The hitchhikers guide to the Galaxy\"");
+        } else{
+            answers.forEach(answer -> {
+                messageConsumer.accept("\t\t* "+answer);
+            });
+
+        }
+
+        return Optional.of(lastInput);
     }
 }

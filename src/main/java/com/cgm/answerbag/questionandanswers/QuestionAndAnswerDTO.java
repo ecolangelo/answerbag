@@ -1,4 +1,4 @@
-package com.cgm.answerbag.ui;
+package com.cgm.answerbag.questionandanswers;
 
 import java.util.List;
 

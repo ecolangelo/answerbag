@@ -1,11 +1,10 @@
-package com.cgm.answerbag.questionandanswer;
+package com.cgm.answerbag.questionandanswers;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface QuestionAnswerService {
 
-    void add(String question, List<String> answer);
+    void add(QuestionAndAnswerDTO questionAndAnswerDTO);
 
     List<String> ask(String question);
 
