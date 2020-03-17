@@ -40,7 +40,7 @@ public class AddTheQuestionUI implements ConsoleUiBlock {
 
             questionAnswerService.add(parsedInput);
 
-            return Optional.of(NaiveBeanFactory.mainMenu());
+            return Optional.of(new MainMenu(messageConsumer, inputProvider, questionAnswerService));
 
         }
 
