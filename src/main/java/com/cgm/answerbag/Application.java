@@ -6,7 +6,7 @@ public class Application {
 
     public static void main(String[] args)  {
 
-        ConsoleUiBlock mainMenu = NaiveBeanFactory.mainMenu();
+        ConsoleUiBlock mainMenu = ApplicationBeanFactory.mainMenu();
 
         run(mainMenu);
     }

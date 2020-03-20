@@ -1,7 +1,6 @@
 package com.cgm.answerbag.questionandanswers;
 
 import com.cgm.answerbag.ConsoleUiBlock;
-import com.cgm.answerbag.NaiveBeanFactory;
 import com.cgm.answerbag.entrypoint.MainMenu;
 import com.cgm.answerbag.entrypoint.ShowErrorMessageUI;
 

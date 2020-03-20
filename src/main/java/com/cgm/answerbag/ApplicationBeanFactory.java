@@ -10,7 +10,7 @@ import java.io.InputStreamReader;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
-public class NaiveBeanFactory {
+public class ApplicationBeanFactory {
 
     private static MainMenu mainMenu;
 
@@ -20,7 +20,7 @@ public class NaiveBeanFactory {
 
     public static MainMenu mainMenu(){
         if(mainMenu == null) {
-            mainMenu = new MainMenu(messageConsumer(), inputProvider(),questionAnswerService());
+            mainMenu = new MainMenu(messageConsumer(), inputProvider(), questionAnswerService());
         }
         return mainMenu;
     }

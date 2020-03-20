@@ -13,21 +13,6 @@ public class ApplicationTestIntegrationTest {
 
 
 
-//    @Test
-    public void testAddingAQuestionAndThenAskingIt1() {
-
-        ConsoleInteractionStory consoleInteractionStory = ConsoleInteractionStory.start()
-                .consoleDisplay("")
-                .thenClientWrite("")
-                .consoleDisplay("").get();
-
-
-        Application.run(new MainMenu(consoleInteractionStory.messageConsumer(), consoleInteractionStory.inputProvider(), InMemoryQuestionAndAnswers.instance()));
-
-        ConsoleInteractionStory.verify(consoleInteractionStory);
-
-    }
-
     @Test
     public void testAddingAQuestionAndThenAskingIt() {
 

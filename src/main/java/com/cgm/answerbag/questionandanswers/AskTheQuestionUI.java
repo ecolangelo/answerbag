@@ -1,6 +1,7 @@
 package com.cgm.answerbag.questionandanswers;
 
 import com.cgm.answerbag.ConsoleUiBlock;
+import com.cgm.answerbag.entrypoint.MainMenu;
 
 import java.util.List;
 import java.util.Optional;
@@ -36,6 +37,6 @@ public class AskTheQuestionUI implements ConsoleUiBlock {
 
         }
 
-        return Optional.of(lastInput);
+        return Optional.of(new MainMenu(messageConsumer,inputProvider, service));
     }
 }
