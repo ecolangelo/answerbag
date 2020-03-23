@@ -22,9 +22,7 @@ public class AskTheQuestionUITest {
     @Test
     public void whenAskingAnExistingQuestionYoullgetAnAnswer() {
         List<String> messages = new ArrayList<>();
-        Consumer<String> messageConsumer = message->{
-            messages.add(message);
-        };
+        Consumer<String> messageConsumer = messages::add;
         String questionToBeasked = "How old are you?";
         Supplier<String> inputProvider = ()-> questionToBeasked;
         QuestionAnswerService service = mock(QuestionAnswerService.class);
@@ -49,9 +47,7 @@ public class AskTheQuestionUITest {
     @Test
     public void ifNoAnswerIsFoundTheAnswerToEverythingIs42() {
         List<String> messages = new ArrayList<>();
-        Consumer<String> messageConsumer = message->{
-            messages.add(message);
-        };
+        Consumer<String> messageConsumer = messages::add;
         String questionToBeasked = "How many pillows are in my bedroom";
         Supplier<String> inputProvider = ()-> questionToBeasked;
         QuestionAnswerService service = mock(QuestionAnswerService.class);

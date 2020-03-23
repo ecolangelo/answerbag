@@ -16,8 +16,6 @@ public class ApplicationBeanFactory {
 
     private static Consumer<String> consumer = System.out::println;
 
-    private static Supplier<String> inputProvider;
-
     public static MainMenu mainMenu(){
         if(mainMenu == null) {
             mainMenu = new MainMenu(messageConsumer(), inputProvider(), questionAnswerService());
